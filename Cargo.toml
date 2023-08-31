@@ -1,0 +1,30 @@
+[package]
+name = "scale_signature_interfaces"
+version = "0.1.2"
+edition = "2021"
+description = "The Scale Signature Interfaces for generating host and guest signatures across multiple languages"
+homepage = "https://scale.sh"
+repository = "https://github.com/loopholelabs/scale-signature-interfaces"
+license = "Apache-2.0"
+exclude = [
+    "**/*.go",
+    "**/*.ts",
+    "**/*.js",
+    "*.go",
+    "*.ts",
+    "*.js",
+    "*.json",
+    "go.mod",
+    "go.sum",
+    "node_modules",
+    "dist",
+    "target"
+]
+
+[lib]
+path = "lib.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
