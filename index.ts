@@ -20,5 +20,5 @@ export interface Index {
     Read(b: Uint8Array): Error | undefined;
     Write(): Uint8Array;
     Error(err: Error): Uint8Array;
-    Hash(): String;
+    Hash(): string;
 }
