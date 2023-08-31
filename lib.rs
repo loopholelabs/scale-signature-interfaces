@@ -23,4 +23,3 @@ pub trait Signature {
     fn error(&self, err: Box<dyn std::error::Error>) -> Vec<u8>;
     fn hash(&self) -> String;
 }
-
