@@ -14,14 +14,15 @@
 	limitations under the License.
 */
 
-// New is a factory function for creating a new Signature
-export type New<T extends Signature> = () => T;
+package version
 
-// Signature is an interface that must be implemented by all Scale Signatures
-// for use with the Host. Guest implementations do not use this interface.
-export interface Signature {
-    Read(b: Uint8Array): Error | undefined;
-    Write(): Uint8Array;
-    Error(err: Error): Uint8Array;
-    Hash(): string;
+import (
+	_ "embed"
+)
+
+//go:embed current_version
+var currentVersion string
+
+func Version() string {
+	return currentVersion
 }

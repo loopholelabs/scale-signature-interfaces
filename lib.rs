@@ -14,9 +14,12 @@
     limitations under the License.
 */
 
+// New is a factory function for creating a new Signature
 #[allow(type_alias_bounds)]
 pub type New<T: Signature> = fn() -> T;
 
+// Signature is an interface that must be implemented by all Scale Signatures
+// for use with the Host. Guest implementations do not use this interface.
 pub trait Signature {
     fn read(&mut self, b: &mut Vec<u8>) -> Option<Box<dyn std::error::Error>>;
     fn write(&self) -> Vec<u8>;
