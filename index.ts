@@ -14,9 +14,9 @@
 	limitations under the License.
 */
 
-export type New<T extends Index> = () => T;
+export type New<T extends Signature> = () => T;
 
-export interface Index {
+export interface Signature {
     Read(b: Uint8Array): Error | undefined;
     Write(): Uint8Array;
     Error(err: Error): Uint8Array;
