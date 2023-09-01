@@ -16,6 +16,12 @@
 
 package interfaces
 
+// TYPESCRIPT_NEXT_FUNCTION is the name of the next function in the typescript guest runtime
+const TYPESCRIPT_NEXT_FUNCTION = "scale_next" //nolint:revive
+
+// TYPESCRIPT_ADDRESS_OF is the name of the address_of function in the typescript guest runtime
+const TYPESCRIPT_ADDRESS_OF = "scale_address_of" //nolint:revive
+
 // New is a factory function for creating a new Signature
 type New[T Signature] func() T
 

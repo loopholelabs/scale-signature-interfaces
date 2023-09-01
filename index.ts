@@ -14,6 +14,12 @@
 	limitations under the License.
 */
 
+// TYPESCRIPT_NEXT_FUNCTION is the name of the next function in the typescript guest runtime
+export const TYPESCRIPT_NEXT_FUNCTION: string = "scale_next";
+
+// TYPESCRIPT_ADDRESS_OF is the name of the address_of function in the typescript guest runtime
+export const TYPESCRIPT_ADDRESS_OF: string = "scale_address_of";
+
 // New is a factory function for creating a new Signature
 export type New<T extends Signature> = () => T;
 
