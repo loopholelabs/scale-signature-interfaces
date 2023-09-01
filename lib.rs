@@ -14,8 +14,8 @@
     limitations under the License.
 */
 
-// TYPESCRIPT_NEXT_FUNCTION is the name of the next function in the typescript guest runtime
-pub const TYPESCRIPT_NEXT_FUNCTION: &str = "scale_next";
+// TYPESCRIPT_NEXT is the name of the next function in the typescript guest runtime
+pub const TYPESCRIPT_NEXT: &str = "scale_next";
 
 // TYPESCRIPT_ADDRESS_OF is the name of the address_of function in the typescript guest runtime
 pub const TYPESCRIPT_ADDRESS_OF: &str = "scale_address_of";
